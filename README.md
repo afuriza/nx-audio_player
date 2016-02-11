@@ -1,4 +1,4 @@
-This is simple Audio Player implementation in Lazarus Freepascal using uos_flat unit.
+# This is simple Audio Player implementation in Lazarus Freepascal using uos_flat unit.
 
 *Features:
 - Volume Control
