@@ -7,7 +7,7 @@
 - Auto next play
 
 *Information:
-- You need to add MSVCR110.DLL to you project directory or install that on your machine
+- In Windows you need to add MSVCR110.DLL to you project directory or install that redrisbutive on your machine
 - Checkout the unit dependency and all library in audlib folder
 
 *License:
