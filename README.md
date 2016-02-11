@@ -7,7 +7,7 @@ This is simple Audio Player implementation in Lazarus Freepascal using uos_flat 
 - Auto next play
 
 *Information:
-- You need to add MSVC110.DLL to you project directory or install that on your machine
+- You need to add MSVCR110.DLL to you project directory or install that on your machine
 - Checkout the unit dependency and all library in audlib folder
 
 
