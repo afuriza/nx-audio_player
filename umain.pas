@@ -143,45 +143,45 @@ begin
   ordir := application.Location;
   {$IFDEF Windows}
   {$if defined(cpu64)}
-  lib1 := ordir + 'lib\Windows\64bit\LibPortaudio-64.dll';
-  lib2 := ordir + 'lib\Windows\64bit\LibSndFile-64.dll';
-  lib3 := ordir + 'lib\Windows\64bit\LibMpg123-64.dll';
+  lib1 := ordir + 'audlib\Windows\64bit\LibPortaudio-64.dll';
+  lib2 := ordir + 'audlib\Windows\64bit\LibSndFile-64.dll';
+  lib3 := ordir + 'audlib\Windows\64bit\LibMpg123-64.dll';
   {$else}
-  lib1 := ordir + 'lib\Windows\32bit\LibPortaudio-32.dll';
-  lib2 := ordir + 'lib\Windows\32bit\LibSndFile-32.dll';
-  lib3 := ordir + 'lib\Windows\32bit\LibMpg123-32.dll';
+  lib1 := ordir + 'audlib\Windows\32bit\LibPortaudio-32.dll';
+  lib2 := ordir + 'audlib\Windows\32bit\LibSndFile-32.dll';
+  lib3 := ordir + 'audlib\Windows\32bit\LibMpg123-32.dll';
   {$endif}
   {$ENDIF}
 
   {$IFDEF Darwin}
   opath := ordir;
   opath := copy(opath, 1, Pos('/uos', opath) - 1);
-  lib1 := opath + '/lib/Mac/32bit/LibPortaudio-32.dylib';
-  lib2 := opath + '/lib/Mac/32bit/LibSndFile-32.dylib';
-  lib3 := opath + '/lib/Mac/32bit/LibMpg123-32.dylib';
+  lib1 := opath + '/audlib/Mac/32bit/LibPortaudio-32.dylib';
+  lib2 := opath + '/audlib/Mac/32bit/LibSndFile-32.dylib';
+  lib3 := opath + '/audlib/Mac/32bit/LibMpg123-32.dylib';
   {$ENDIF}
 
   {$IFDEF linux}
   {$if defined(cpu64)}
-  lib1 := ordir + 'lib/Linux/64bit/LibPortaudio-64.so';
-  lib2 := ordir + 'lib/Linux/64bit/LibSndFile-64.so';
-  lib3 := ordir + 'lib/Linux/64bit/LibMpg123-64.so';
+  lib1 := ordir + 'audlib/Linux/64bit/LibPortaudio-64.so';
+  lib2 := ordir + 'audlib/Linux/64bit/LibSndFile-64.so';
+  lib3 := ordir + 'audlib/Linux/64bit/LibMpg123-64.so';
   {$else}
-  lib1 := ordir + 'lib/Linux/32bit/LibPortaudio-32.so';
-  lib2 := ordir + 'lib/Linux/32bit/LibSndFile-32.so';
-  lib3 := ordir + 'lib/Linux/32bit/LibMpg123-32.so';
+  lib1 := ordir + 'audlib/Linux/32bit/LibPortaudio-32.so';
+  lib2 := ordir + 'audlib/Linux/32bit/LibSndFile-32.so';
+  lib3 := ordir + 'audlib/Linux/32bit/LibMpg123-32.so';
   {$endif}
   {$ENDIF}
 
   {$IFDEF freebsd}
   {$if defined(cpu64)}
-  lib1 := ordir + 'lib/FreeBSD/64bit/libportaudio-64.so';
-  lib2 := ordir + 'lib/FreeBSD/64bit/libmpg123-64.so';
-  lib3 := ordir + 'lib/FreeBSD/64bit/libsndfile-64.so';
+  lib1 := ordir + 'audlib/FreeBSD/64bit/libportaudio-64.so';
+  lib2 := ordir + 'audlib/FreeBSD/64bit/libmpg123-64.so';
+  lib3 := ordir + 'audlib/FreeBSD/64bit/libsndfile-64.so';
   {$else}
-  lib1 := ordir + 'lib/FreeBSD/32bit/libportaudio-32.so';
-  lib2 := ordir + 'lib/FreeBSD/32bit/libsndfile-32.so';
-  lib3 := ordir + 'lib/FreeBSD/32bit/libmpg123-32.so';
+  lib1 := ordir + 'audlib/FreeBSD/32bit/libportaudio-32.so';
+  lib2 := ordir + 'audlib/FreeBSD/32bit/libsndfile-32.so';
+  lib3 := ordir + 'audlib/FreeBSD/32bit/libmpg123-32.so';
   {$endif}
   {$ENDIF}
   if uos_LoadLib(PChar(lib1), PChar(lib2), PChar(lib3)) = 0 then
