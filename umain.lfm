@@ -1,0 +1,128 @@
+object fmain: Tfmain
+  Left = 394
+  Height = 435
+  Top = 194
+  Width = 388
+  Caption = 'Simple Music Player'
+  ClientHeight = 435
+  ClientWidth = 388
+  OnActivate = FormActivate
+  OnClose = FormClose
+  Position = poScreenCenter
+  LCLVersion = '1.4.4.0'
+  object lvTrack: TListView
+    Left = 16
+    Height = 246
+    Top = 176
+    Width = 356
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Columns = <    
+      item
+        Caption = 'Name'
+        Width = 200
+      end    
+      item
+        Caption = 'Duration'
+        Width = 70
+      end>
+    ReadOnly = True
+    RowSelect = True
+    TabOrder = 0
+    ViewStyle = vsReport
+  end
+  object btnPlay: TButton
+    Left = 32
+    Height = 26
+    Top = 136
+    Width = 72
+    Caption = 'Play'
+    OnClick = btnPlayClick
+    TabOrder = 1
+  end
+  object btnStop: TButton
+    Left = 112
+    Height = 26
+    Top = 136
+    Width = 72
+    Caption = 'Stop'
+    Enabled = False
+    OnClick = btnStopClick
+    TabOrder = 2
+  end
+  object btnAddAudF: TButton
+    Left = 264
+    Height = 26
+    Top = 136
+    Width = 86
+    Anchors = [akTop, akRight]
+    Caption = 'Add File'
+    OnClick = btnAddAudFClick
+    TabOrder = 3
+  end
+  object tbTrack: TTrackBar
+    Left = 16
+    Height = 25
+    Top = 48
+    Width = 356
+    OnChange = tbTrackChange
+    Position = 0
+    ShowSelRange = False
+    TickStyle = tsNone
+    Anchors = [akTop, akLeft, akRight]
+    OnMouseDown = tbTrackMouseDown
+    OnMouseUp = tbTrackMouseUp
+    TabOrder = 4
+  end
+  object lposition: TLabel
+    Left = 24
+    Height = 16
+    Top = 72
+    Width = 34
+    Caption = '00:00'
+    ParentColor = False
+  end
+  object ltname: TLabel
+    Left = 24
+    Height = 16
+    Top = 24
+    Width = 75
+    Caption = 'Audio Name'
+    ParentColor = False
+  end
+  object tbVol: TTrackBar
+    Left = 274
+    Height = 21
+    Top = 96
+    Width = 89
+    OnChange = tbVolChange
+    Position = 5
+    ShowSelRange = False
+    TickStyle = tsNone
+    Anchors = [akTop, akRight]
+    TabOrder = 5
+  end
+  object Label3: TLabel
+    Left = 219
+    Height = 16
+    Top = 96
+    Width = 46
+    Anchors = [akTop, akRight]
+    Caption = 'Volume'
+    ParentColor = False
+  end
+  object llength: TLabel
+    Left = 329
+    Height = 16
+    Top = 72
+    Width = 34
+    Anchors = [akTop, akRight]
+    BidiMode = bdRightToLeft
+    Caption = '00:00'
+    ParentBidiMode = False
+    ParentColor = False
+  end
+  object OpenDialog1: TOpenDialog
+    left = 182
+    top = 83
+  end
+end
