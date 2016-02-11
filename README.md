@@ -10,5 +10,5 @@ This is simple Audio Player implementation in Lazarus Freepascal using uos_flat 
 - You need to add MSVCR110.DLL to you project directory or install that on your machine
 - Checkout the unit dependency and all library in audlib folder
 
-
-Use and modify the code freely
+*License:
+- Use and modify the code freely
