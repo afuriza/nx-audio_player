@@ -2,5 +2,5 @@ This is simple Audio Player implementation in Lazarus Freepascal using uos_flat 
 Feature:
 - Volume Control
 - Seek audio position
-- Add many file to playlist
+- Add many files to playlist
 - Auto next play
